@@ -67,6 +67,8 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            position: relative;
+            z-index: 10;
         }
 
         nav .cta {
@@ -108,6 +110,7 @@
             border-radius: 50%;
             filter: blur(40px);
             pointer-events: none;
+            z-index: 0;
         }
 
         .hero::after {
@@ -121,6 +124,7 @@
             border-radius: 50%;
             filter: blur(40px);
             pointer-events: none;
+            z-index: 0;
         }
 
         .hero-content {
@@ -176,7 +180,7 @@
         /* Features Grid */
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
             margin: 3rem 0;
             padding: 3rem;
@@ -241,6 +245,7 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            z-index: 2;
         }
 
         .pricing-card::before {
@@ -272,6 +277,8 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             margin: 1rem 0;
+            position: relative;
+            z-index: 2;
         }
 
         .price-period {
@@ -484,6 +491,10 @@
             }
 
             .spotify-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features {
                 grid-template-columns: 1fr;
             }
         }
